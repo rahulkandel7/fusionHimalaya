@@ -69,6 +69,18 @@
                     </a>
                 </li> 
 
+                <li class="text-lg py-1.5">
+                    <a href="{{route('admin.categories.index')}}" class="flex items-center @if(Route::is('admin.categories.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
+                        <i class="ri-folder-line text-xl"></i></i> &nbsp; </i> Category
+                    </a>
+                </li> 
+
+                <li class="text-lg py-1.5">
+                    <a href="{{route('admin.cartes.index')}}" class="flex items-center @if(Route::is('admin.cartes.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
+                        <i class="ri-restaurant-2-line text-xl"></i> &nbsp; </i> A-LA-CARTE
+                    </a>
+                </li> 
+
                 {{-- <li class="text-lg py-1.5">
                     <a href="{{route('admin.contacts.index')}}" class="flex items-center @if(Route::is('admin.contacts.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
                         <i class="ri-mail-line text-xl"> &nbsp; </i> Contact

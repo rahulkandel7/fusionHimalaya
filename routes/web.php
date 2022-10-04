@@ -50,6 +50,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     Route::resource('populars', \App\Http\Controllers\Admin\PopularController::class);
     Route::post('/populars/delete', [\App\Http\Controllers\Admin\PopularController::class, 'delete'])->name('populars.delete');
+
+    Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class);
+    Route::post('/categories/delete', [\App\Http\Controllers\Admin\CategoryController::class, 'delete'])->name('categories.delete');
 });
 
 require __DIR__ . '/auth.php';
