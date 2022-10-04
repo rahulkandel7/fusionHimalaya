@@ -5,6 +5,12 @@
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+
+ <style>
+ [x-cloak] {
+    display: none;
+  }
+ </style>
     
 @endsection
 
@@ -105,7 +111,7 @@
 
     <div class="flex justify-center items-center my-7">
       {{-- Lunch Model --}}
-      <div x-data="{isLunch:false}">
+      <div x-data="{isLunch:false}" x-cloak>
         <button @click="isLunch=true" class="uppercase text-red-500 mx-2 hover:text-white transition ease-in-out duration-300 text-xl rounded-lg shadow-lg hover:bg-red-600 px-4 py-1 border border-red-500">Lunch</button>
         <div class="fixed top-0 bottom-0 right-0 left-0 bg-black bg-opacity-60 backdrop-blur-sm z-50" x-show="isLunch" >
           <div class="flex justify-center items-center h-full" >
@@ -291,7 +297,7 @@
       {{-- Lunch Model close --}}
 
        {{-- a-la-carte Model --}}
-        <div x-data="{alacarte:false}">
+        <div x-data="{alacarte:false}" x-cloak>
           <button @click="alacarte=true" class="uppercase text-red-500 mx-2 hover:text-white transition ease-in-out duration-300 text-xl rounded-lg shadow-lg hover:bg-red-600 px-4 py-1 border border-red-500">a-la-carte</button>
           <div class="fixed top-0 bottom-0 right-0 left-0 bg-black bg-opacity-60 backdrop-blur-sm z-50" x-show="alacarte" >
             <div class="flex justify-center items-center h-full" >
@@ -402,85 +408,24 @@
     <h1 class="text-indigo-500 text-5xl md:text-7xl text-center font-bold my-10" style="font-family: 'Beau Rivage', handwriting;">
       Popular Dishes
     </h1>
-    <div class="w-9/12 mx-auto grid md:grid-cols-2 gap-5 md:gap-20">
-      <div>
-        <div class="flex items-center justify-between my-5">
-          <div class="flex items-center">
-            <img src="{{asset('images/slide1.webp')}}" alt="" class="w-24 rounded-full h-24 object-cover">
-            <p class="text-gray-600 mx-4">
-              name of food
-            </p>
+    <div class="w-9/12 mx-auto grid md:grid-cols-2 gap-5 md:gap-10 pb-14">
+      @foreach ($populars as $popular)
+          <div>
+            <div class="flex items-center justify-between ">
+                <div class="flex items-center">
+                  <img src="{{asset('public/'.$popular->photopath)}}" alt="" class="w-24 rounded-full h-24 object-cover">
+                  <p class="text-gray-600 mx-4">
+                   {{$popular->title}}
+                  </p>
+                </div>
+                <p class="text-gray-700 font-bold">
+                  {{$popular->price}} &euro;
+                </p>
+              </div>
           </div>
-          <p class="text-gray-700 font-bold">
-            17,45 &euro;
-          </p>
-        </div>
+      @endforeach
+     
 
-        <div class="flex items-center justify-between my-5">
-          <div class="flex items-center">
-            <img src="{{asset('images/slide1.webp')}}" alt="" class="w-24 rounded-full h-24 object-cover">
-            <p class="text-gray-600 mx-4">
-              name of food
-            </p>
-          </div>
-          <p class="text-gray-700 font-bold">
-            17,45 &euro;
-          </p>
-        </div>
-
-        <div class="flex items-center justify-between my-5">
-          <div class="flex items-center">
-            <img src="{{asset('images/slide1.webp')}}" alt="" class="w-24 rounded-full h-24 object-cover">
-            <p class="text-gray-600 mx-4">
-              name of food
-            </p>
-          </div>
-          <p class="text-gray-700 font-bold">
-            17,45 &euro;
-          </p>
-        </div>
-
-       
-      </div>
-
-      <div>
-        <div class="flex items-center justify-between my-5">
-          <div class="flex items-center">
-            <img src="{{asset('images/slide1.webp')}}" alt="" class="w-24 rounded-full h-24 object-cover">
-            <p class="text-gray-600 mx-4">
-              name of food
-            </p>
-          </div>
-          <p class="text-gray-700 font-bold">
-            17,45 &euro;
-          </p>
-        </div>
-
-        <div class="flex items-center justify-between my-5">
-          <div class="flex items-center">
-            <img src="{{asset('images/slide1.webp')}}" alt="" class="w-24 rounded-full h-24 object-cover">
-            <p class="text-gray-600 mx-4">
-              name of food
-            </p>
-          </div>
-          <p class="text-gray-700 font-bold">
-            17,45 &euro;
-          </p>
-        </div>
-
-        <div class="flex items-center justify-between my-5">
-          <div class="flex items-center">
-            <img src="{{asset('images/slide1.webp')}}" alt="" class="w-24 rounded-full h-24 object-cover">
-            <p class="text-gray-600 mx-4">
-              name of food
-            </p>
-          </div>
-          <p class="text-gray-700 font-bold">
-            17,45 &euro;
-          </p>
-        </div>
-
-      </div>
     </div>
   </div>
 

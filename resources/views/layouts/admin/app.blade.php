@@ -59,7 +59,13 @@
 
                 <li class="text-lg py-1.5">
                     <a href="{{route('admin.lunches.index')}}" class="flex items-center @if(Route::is('admin.lunches.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
-                        <i class="ri-gallery-line text-xl"> &nbsp; </i> Lunch
+                        <i class="ri-restaurant-2-line text-xl"></i> &nbsp; </i> Lunch
+                    </a>
+                </li> 
+
+                <li class="text-lg py-1.5">
+                    <a href="{{route('admin.populars.index')}}" class="flex items-center @if(Route::is('admin.populars.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
+                        <i class="ri-star-line text-xl"></i></i> &nbsp; </i> Popular
                     </a>
                 </li> 
 

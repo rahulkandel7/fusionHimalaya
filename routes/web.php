@@ -2,6 +2,7 @@
 
 use App\Models\Gallery;
 use App\Models\Lunch;
+use App\Models\Popular;
 use App\Models\Slideshow;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,8 @@ Route::get('/', function () {
     $galleries = Gallery::take(6)->latest()->get();
     $slideshows = Slideshow::all()->sortBy('priority');
     $lunches = Lunch::all();
-    return view('welcome', compact('galleries', 'slideshows', 'lunches'));
+    $populars = Popular::all();
+    return view('welcome', compact('galleries', 'slideshows', 'lunches', 'populars'));
 })->name('home');
 
 Route::get('/gallery', function () {
@@ -45,6 +47,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     Route::resource('lunches', \App\Http\Controllers\Admin\LunchController::class);
     Route::post('/lunches/delete', [\App\Http\Controllers\Admin\LunchController::class, 'delete'])->name('lunches.delete');
+
+    Route::resource('populars', \App\Http\Controllers\Admin\PopularController::class);
+    Route::post('/populars/delete', [\App\Http\Controllers\Admin\PopularController::class, 'delete'])->name('populars.delete');
 });
 
 require __DIR__ . '/auth.php';

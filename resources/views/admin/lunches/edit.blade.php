@@ -59,44 +59,7 @@
                 </select>
             </div>
 
-            <div class="my-8">
-                <label class="py-2 text-gray-700 dark:text-gray-400">Is Lactos Free</label>
-
-                <input type="radio" name="isLactoseFree" id="" value="1" @if($lunch->isLactoseFree == 1) checked @endif class="mx-2 border shadow-lg rounded-md placeholder:text-gray-400 focus:ring-indigo-500"> Yes
-                <input type="radio" name="isLactoseFree" id="" value="0"  @if($lunch->isLactoseFree == 0) checked @endif class="mx-2 border shadow-lg rounded-md placeholder:text-gray-400 focus:ring-indigo-500"> No
-
-                @error('isLactoseFree')
-                <p class="text-red-500 p-2">
-                    {{$message}}
-                </p>
-            @enderror
-            </div>
-
-            <div class="my-8">
-                <label class="py-2 text-gray-700 dark:text-gray-400">Is Gulton Free</label>
-
-                <input type="radio" name="isGlutenFree" id="" value="1"  @if($lunch->isGlutenFree == 1) checked @endif class="mx-2 border shadow-lg rounded-md placeholder:text-gray-400 focus:ring-indigo-500"> Yes
-                <input type="radio" name="isGlutenFree" id="" value="0"  @if($lunch->isGlutenFree == 0) checked @endif class="mx-2 border shadow-lg rounded-md placeholder:text-gray-400 focus:ring-indigo-500"> No
-
-                @error('isGlutenFree')
-                    <p class="text-red-500 p-2">
-                        {{$message}}
-                    </p>
-                @enderror
-            </div>
-
-            <div class="my-8">
-                <label class="py-2 text-gray-700 dark:text-gray-400">Is Vegan</label>
-
-                <input type="radio" name="isVegan" id="" value="1"  @if($lunch->isVegan == 1) checked @endif class="mx-2 border shadow-lg rounded-md placeholder:text-gray-400 focus:ring-indigo-500"> Yes
-                <input type="radio" name="isVegan" id="" value="0"  @if($lunch->isVegan == 0) checked @endif class="mx-2 border shadow-lg rounded-md placeholder:text-gray-400 focus:ring-indigo-500"> No
-
-                @error('isVegan')
-                    <p class="text-red-500 p-2">
-                        {{$message}}
-                    </p>
-                @enderror
-            </div>
+           
 
             <div class="flex my-6">
                 <a href="{{route('admin.lunches.index')}}" class="bg-red-400  px-8 py-1 rounded-md shadow-md hover:shadow-lg hover:bg-red-500 text-white">

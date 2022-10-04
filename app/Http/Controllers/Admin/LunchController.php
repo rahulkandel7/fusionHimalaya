@@ -42,9 +42,6 @@ class LunchController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'isLactoseFree' => 'required',
-            'isGlutenFree' => 'required',
-            'isVegan' => 'required',
         ]);
 
         Lunch::create($request->all());
@@ -89,9 +86,6 @@ class LunchController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'isLactoseFree' => 'required',
-            'isGlutenFree' => 'required',
-            'isVegan' => 'required',
         ]);
 
         $lunch->update($request->all());
