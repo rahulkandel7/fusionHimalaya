@@ -135,95 +135,152 @@
                         x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 5 }">Friday </button>
                 </div>
                 <div x-show="current === 1" class="p-3 text-center mt-2 text-xs md:text-base">
-                    <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                  @foreach ($lunches as $lunch)
+                      @if ($lunch->day == 'Monday')
+                      <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                         <div class="flex justify-between items-center">
                           <div class="flex items-center">
                             <p class="text-gray-500">
-                              1
+                              {{$loop->iteration}}
                             </p>
                             <div class="mx-4 text-gray-500">
                               <p class="text-left font-bold">
-                                Saag Paneer <span class="font-normal">(G,L) <sup>*</sup> </span>
+                                {{$lunch->name}}
+                                @if ($lunch->isLactoseFree == 1 || $lunch->isVegan == 1 || $lunch->isGlutenFree == 1)
+                                  <span class="font-normal">({{$lunch->isLactoseFree == 1 ? 'L ' :''}}{{$lunch->isGlutenFree == 1 ? ',G ' :''}} {{$lunch->isVegan == 1 ? ',V' :''}}) <sup>*</sup> </span>
+                                @endif 
                               </p>
                               <div class=" text-xs py-1 text-justify">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam illo possimus nam, maiores, accusamus veritatis quod omnis voluptatum quidem modi deserunt, assumenda quisquam numquam dicta obcaecati aspernatur excepturi similique.
+                                {{$lunch->description}}
                               </div>
                             </div>
                           </div>
                           <p class="text-gray-600 w-56">
-                            1234 &euro;
+                            {{$lunch->price}} &euro;
                           </p>
                         </div>
                     </div>
-
-                    <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
-                      <div class="flex justify-between items-center">
-                        <div class="flex items-center">
-                          <p class="text-gray-500">
-                            1
-                          </p>
-                          <div class="mx-4 text-gray-500">
-                            <p class="text-left font-bold">
-                              Saag Paneer <span class="font-normal">(G,L) <sup>*</sup> </span>
-                            </p>
-                            <div class="text-left text-xs py-1 ">
-                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam illo possimus nam, maiores, accusamus veritatis quod omnis voluptatum quidem modi deserunt, assumenda quisquam numquam dicta obcaecati aspernatur excepturi similique.
-                            </div>
-                          </div>
-                        </div>
-                        <p class="text-gray-600 w-40">
-                          1234 &euro;
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
-                      <div class="flex justify-between items-center">
-                        <div class="flex items-center">
-                          <p class="text-gray-500">
-                            1
-                          </p>
-                          <div class="mx-4 text-gray-500">
-                            <p class="text-left font-bold">
-                              Saag Paneer <span class="font-normal">(G,L) <sup>*</sup> </span>
-                            </p>
-                            <div class="text-left text-xs py-1 ">
-                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam illo possimus nam, maiores, accusamus veritatis quod omnis voluptatum quidem modi deserunt, assumenda quisquam numquam dicta obcaecati aspernatur excepturi similique.
-                            </div>
-                          </div>
-                        </div>
-                        <p class="text-gray-600 w-40">
-                          1234 &euro;
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
-                      <div class="flex justify-between items-center">
-                        <div class="flex items-center">
-                          <p class="text-gray-500">
-                            1
-                          </p>
-                          <div class="mx-4 text-gray-500">
-                            <p class="text-left font-bold">
-                              Saag Paneer <span class="font-normal">(G,L) <sup>*</sup> </span>
-                            </p>
-                            <div class="text-left text-xs py-1 ">
-                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam illo possimus nam, maiores, accusamus veritatis quod omnis voluptatum quidem modi deserunt, assumenda quisquam numquam dicta obcaecati aspernatur excepturi similique.
-                            </div>
-                          </div>
-                        </div>
-                        <p class="text-gray-600 w-40">
-                          1234 &euro;
-                        </p>
-                      </div>
-                    </div>
+                      @endif
+                  @endforeach
+                 
                 </div>
                 <div x-show="current === 2" class="p-3 text-center mt-6">
-                    <p>Second Tab Content</p>
+                      @foreach ($lunches as $lunch)
+                      @if ($lunch->day == 'Tuesday')
+                      <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                        <div class="flex justify-between items-center">
+                          <div class="flex items-center">
+                            <p class="text-gray-500">
+                              {{$loop->iteration}}
+                            </p>
+                            <div class="mx-4 text-gray-500">
+                              <p class="text-left font-bold">
+                                {{$lunch->name}}
+                                @if ($lunch->isLactoseFree == 1 || $lunch->isVegan == 1 || $lunch->isGlutenFree == 1)
+                                  <span class="font-normal">({{$lunch->isLactoseFree == 1 ? 'L ' :''}}{{$lunch->isGlutenFree == 1 ? ',G ' :''}} {{$lunch->isVegan == 1 ? ',V' :''}}) <sup>*</sup> </span>
+                                @endif 
+                              </p>
+                              <div class=" text-xs py-1 text-justify">
+                                {{$lunch->description}}
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-gray-600 w-56">
+                            {{$lunch->price}} &euro;
+                          </p>
+                        </div>
+                    </div>
+                      @endif
+                  @endforeach
                 </div>
                 <div x-show="current === 3" class="p-3 text-center mt-6">
-                    <p>Third Tab Content</p>
+                    @foreach ($lunches as $lunch)
+                      @if ($lunch->day == 'Wednesday')
+                      <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                        <div class="flex justify-between items-center">
+                          <div class="flex items-center">
+                            <p class="text-gray-500">
+                              {{$loop->iteration}}
+                            </p>
+                            <div class="mx-4 text-gray-500">
+                              <p class="text-left font-bold">
+                                {{$lunch->name}}
+                                @if ($lunch->isLactoseFree == 1 || $lunch->isVegan == 1 || $lunch->isGlutenFree == 1)
+                                  <span class="font-normal">({{$lunch->isLactoseFree == 1 ? 'L ' :''}}{{$lunch->isGlutenFree == 1 ? ',G ' :''}} {{$lunch->isVegan == 1 ? ',V' :''}}) <sup>*</sup> </span>
+                                @endif 
+                              </p>
+                              <div class=" text-xs py-1 text-justify">
+                                {{$lunch->description}}
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-gray-600 w-56">
+                            {{$lunch->price}} &euro;
+                          </p>
+                        </div>
+                    </div>
+                      @endif
+                  @endforeach
+                </div>
+
+                <div x-show="current === 4" class="p-3 text-center mt-6">
+                  @foreach ($lunches as $lunch)
+                    @if ($lunch->day == 'Thursday')
+                    <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                      <div class="flex justify-between items-center">
+                        <div class="flex items-center">
+                          <p class="text-gray-500">
+                            {{$loop->iteration}}
+                          </p>
+                          <div class="mx-4 text-gray-500">
+                            <p class="text-left font-bold">
+                              {{$lunch->name}}
+                              @if ($lunch->isLactoseFree == 1 || $lunch->isVegan == 1 || $lunch->isGlutenFree == 1)
+                                <span class="font-normal">({{$lunch->isLactoseFree == 1 ? 'L ' :''}}{{$lunch->isGlutenFree == 1 ? ',G ' :''}} {{$lunch->isVegan == 1 ? ',V' :''}}) <sup>*</sup> </span>
+                              @endif 
+                            </p>
+                            <div class=" text-xs py-1 text-justify">
+                              {{$lunch->description}}
+                            </div>
+                          </div>
+                        </div>
+                        <p class="text-gray-600 w-56">
+                          {{$lunch->price}} &euro;
+                        </p>
+                      </div>
+                  </div>
+                    @endif
+                @endforeach
+               </div>
+
+                <div x-show="current === 5" class="p-3 text-center mt-6">
+                    @foreach ($lunches as $lunch)
+                      @if ($lunch->day == 'Friday')
+                      <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                        <div class="flex justify-between items-center">
+                          <div class="flex items-center">
+                            <p class="text-gray-500">
+                              {{$loop->iteration}}
+                            </p>
+                            <div class="mx-4 text-gray-500">
+                              <p class="text-left font-bold">
+                                {{$lunch->name}}
+                                @if ($lunch->isLactoseFree == 1 || $lunch->isVegan == 1 || $lunch->isGlutenFree == 1)
+                                  <span class="font-normal">({{$lunch->isLactoseFree == 1 ? 'L ' :''}}{{$lunch->isGlutenFree == 1 ? ',G ' :''}} {{$lunch->isVegan == 1 ? ',V' :''}}) <sup>*</sup> </span>
+                                @endif 
+                              </p>
+                              <div class=" text-xs py-1 text-justify">
+                                {{$lunch->description}}
+                              </div>
+                            </div>
+                          </div>
+                          <p class="text-gray-600 w-56">
+                            {{$lunch->price}} &euro;
+                          </p>
+                        </div>
+                    </div>
+                      @endif
+                  @endforeach
                 </div>
             </div>
               {{-- Menu Tabbed view Close --}}

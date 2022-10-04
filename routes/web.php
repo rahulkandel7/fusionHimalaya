@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Gallery;
+use App\Models\Lunch;
 use App\Models\Slideshow;
 use Illuminate\Support\Facades\Route;
 
@@ -17,8 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $galleries = Gallery::take(6)->latest()->get();
-    $slideshows = Slideshow::all()->orderBy('priority', 'asc');
-    return view('welcome', compact('galleries', 'slideshows'));
+    $slideshows = Slideshow::all()->sortBy('priority');
+    $lunches = Lunch::all();
+    return view('welcome', compact('galleries', 'slideshows', 'lunches'));
 })->name('home');
 
 Route::get('/gallery', function () {
@@ -40,6 +42,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     Route::resource('galleries', \App\Http\Controllers\Admin\GalleryController::class);
     Route::post('/galleries/delete', [\App\Http\Controllers\Admin\GalleryController::class, 'delete'])->name('galleries.delete');
+
+    Route::resource('lunches', \App\Http\Controllers\Admin\LunchController::class);
+    Route::post('/lunches/delete', [\App\Http\Controllers\Admin\LunchController::class, 'delete'])->name('lunches.delete');
 });
 
 require __DIR__ . '/auth.php';

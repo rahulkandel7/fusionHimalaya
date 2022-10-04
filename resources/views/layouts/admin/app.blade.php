@@ -57,6 +57,12 @@
                     </a>
                 </li> 
 
+                <li class="text-lg py-1.5">
+                    <a href="{{route('admin.lunches.index')}}" class="flex items-center @if(Route::is('admin.lunches.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
+                        <i class="ri-gallery-line text-xl"> &nbsp; </i> Lunch
+                    </a>
+                </li> 
+
                 {{-- <li class="text-lg py-1.5">
                     <a href="{{route('admin.contacts.index')}}" class="flex items-center @if(Route::is('admin.contacts.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
                         <i class="ri-mail-line text-xl"> &nbsp; </i> Contact
