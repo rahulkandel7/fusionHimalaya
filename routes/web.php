@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Carte;
+use App\Models\Category;
 use App\Models\Gallery;
 use App\Models\Lunch;
 use App\Models\Popular;
@@ -22,7 +24,9 @@ Route::get('/', function () {
     $slideshows = Slideshow::all()->sortBy('priority');
     $lunches = Lunch::all();
     $populars = Popular::all();
-    return view('welcome', compact('galleries', 'slideshows', 'lunches', 'populars'));
+    $cartes = Carte::all();
+    $categories = Category::all();
+    return view('welcome', compact('galleries', 'slideshows', 'lunches', 'populars', 'cartes', 'categories'));
 })->name('home');
 
 Route::get('/gallery', function () {
@@ -33,6 +37,10 @@ Route::get('/gallery', function () {
 Route::get('/contact-us', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/reservation', function () {
+    return view('reservation');
+})->name('reservation');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -53,6 +61,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class);
     Route::post('/categories/delete', [\App\Http\Controllers\Admin\CategoryController::class, 'delete'])->name('categories.delete');
+
+    Route::resource('cartes', \App\Http\Controllers\Admin\CateController::class);
+    Route::post('/cartes/delete', [\App\Http\Controllers\Admin\CateController::class, 'delete'])->name('cartes.delete');
 });
 
 require __DIR__ . '/auth.php';

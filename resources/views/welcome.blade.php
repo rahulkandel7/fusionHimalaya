@@ -100,7 +100,7 @@
       </div>
     </div>
   </div>
-<div id="menu" class=" w-full h-20"></div>
+  <div id="menu" class=" w-full h-20"></div>
   <div class="my-5">
     <h1 class="text-indigo-500 text-5xl md:text-7xl text-center font-bold mt-10" style="font-family: 'Beau Rivage', handwriting;">
       Our Menu
@@ -109,7 +109,7 @@
       Fresh and Delicious
     </p>
 
-    <div class="flex justify-center items-center my-7">
+    <div class="flex justify-center items-center  py-10">
       {{-- Lunch Model --}}
       <div x-data="{isLunch:false}" x-cloak>
         <button @click="isLunch=true" class="uppercase text-red-500 mx-2 hover:text-white transition ease-in-out duration-300 text-xl rounded-lg shadow-lg hover:bg-red-600 px-4 py-1 border border-red-500">Lunch</button>
@@ -315,85 +315,54 @@
                 <div class=" border-b border-gray-200" x-data="{selected:1}">
                   <ul class="shadow-box">
                           
-                    <li class="relative border-b border-gray-200">
-              
-                      <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
-                        <div class="flex items-center justify-between">
-                          <span class="uppercase" x-bind:class="{'font-bold text-indigo-500 ': selected==1}">Starters</span>
-                          <span><i class="ri-add-line" x-bind:class="{'ri-subtract-line ': selected==1}" ></i></span>
-                        </div>
+                    @foreach ($categories as $category)
+                      <li class="relative border-b border-gray-200">
+                
+                        <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== {{$loop->iteration}} ? selected = {{$loop->iteration}} : selected = null">
+                          <div class="flex items-center justify-between">
+                            <span class="uppercase" x-bind:class="{'font-bold text-indigo-500 ': selected=={{$loop->iteration}}}">{{$category->name}}</span>
+                            <span><i class="ri-add-line" x-bind:class="{'ri-subtract-line ': selected=={{$loop->iteration}}}" ></i></span>
+                          </div>
                         </button>
-              
-                      <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                
+                        <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == {{$loop->iteration}} ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                          {{-- @php $cartee = App\Models\Carte::where('category_id',$category->id)->get(); @endphp --}}
+                          {{-- {{$cartee}} --}}
+                          @foreach ($cartes as $carte)
+                          {{$carte->category->name}}
+                          {{$category->name}}
+                            @if($carte->category->name === $category->name)
 
-                        <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
-                          <div class="flex justify-between items-center">
-                            <div class="flex items-center">
-                              <p class="text-gray-500">
-                                1
-                              </p>
-                              <div class="mx-4 text-gray-500">
-                                <p class="text-left font-bold">
-                                  Saag Paneer <span class="font-normal">(G,L) <sup>*</sup> </span>
-                                </p>
-                                <div class=" text-xs py-1 text-justify">
-                                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam illo possimus nam, maiores, accusamus veritatis quod omnis voluptatum quidem modi deserunt, assumenda quisquam numquam dicta obcaecati aspernatur excepturi similique.
+
+                              <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                                <div class="flex justify-between items-center">
+                                  <div class="flex items-center">
+                                    <p class="text-gray-500">
+                                      {{$loop->iteration}}
+                                    </p>
+                                    <div class="mx-4 text-gray-500">
+                                      <p class="text-left font-bold">
+                                        {{$carte->name}}
+                                      </p>
+                                      <div class=" text-xs py-1 text-justify">
+                                        {{$carte->description}}
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <p class="text-gray-600 w-56">
+                                    {{$carte->price}} &euro;
+                                  </p>
                                 </div>
                               </div>
-                            </div>
-                            <p class="text-gray-600 w-56">
-                              1234 &euro;
-                            </p>
-                          </div>
-                      </div>
+                            @endif
+                          @endforeach
 
-                      <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
-                        <div class="flex justify-between items-center">
-                          <div class="flex items-center">
-                            <p class="text-gray-500">
-                              1
-                            </p>
-                            <div class="mx-4 text-gray-500">
-                              <p class="text-left font-bold">
-                                Saag Paneer <span class="font-normal">(G,L) <sup>*</sup> </span>
-                              </p>
-                              <div class=" text-xs py-1 text-justify">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam illo possimus nam, maiores, accusamus veritatis quod omnis voluptatum quidem modi deserunt, assumenda quisquam numquam dicta obcaecati aspernatur excepturi similique.
-                              </div>
-                            </div>
-                          </div>
-                          <p class="text-gray-600 w-56">
-                            1234 &euro;
-                          </p>
                         </div>
-                    </div>
 
-                    <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
-                      <div class="flex justify-between items-center">
-                        <div class="flex items-center">
-                          <p class="text-gray-500">
-                            1
-                          </p>
-                          <div class="mx-4 text-gray-500">
-                            <p class="text-left font-bold">
-                              Saag Paneer <span class="font-normal">(G,L) <sup>*</sup> </span>
-                            </p>
-                            <div class=" text-xs py-1 text-justify">
-                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis aperiam illo possimus nam, maiores, accusamus veritatis quod omnis voluptatum quidem modi deserunt, assumenda quisquam numquam dicta obcaecati aspernatur excepturi similique.
-                            </div>
-                          </div>
-                        </div>
-                        <p class="text-gray-600 w-56">
-                          1234 &euro;
-                        </p>
-                      </div>
-                  </div>
-
-             
-                        </div>
-                      </div>
-              
-                    </li>
+                
+                      </li>
+                    @endforeach
+                    
               
                   </ul>
                 </div>
@@ -404,7 +373,7 @@
       {{-- a-la-carte Model close --}}
     </div>
 
-    <hr class="border-red-100 my-5">
+    <hr class="border-red-100 mb-5">
     <h1 class="text-indigo-500 text-5xl md:text-7xl text-center font-bold my-10" style="font-family: 'Beau Rivage', handwriting;">
       Popular Dishes
     </h1>

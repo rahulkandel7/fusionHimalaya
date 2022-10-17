@@ -70,7 +70,7 @@
                                 </li>
                             </a>
 
-                            <a href="" class="hover:text-red-500 mx-5">
+                            <a href="{{route('reservation')}}" class="hover:text-red-500 mx-5 @if (Route::currentRouteName() == 'reservation') text-red-500 @endif" >
                                 <li>
                                     Reservation
                                 </li>
