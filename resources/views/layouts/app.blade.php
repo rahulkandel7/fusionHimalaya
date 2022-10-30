@@ -64,7 +64,7 @@
                                 </li>
                             </a>
 
-                            <a href="#menu" class="hover:text-red-500 mx-5" >
+                            <a href="/#menu" class="hover:text-red-500 mx-5" >
                                 <li>
                                     Menu
                                 </li>
