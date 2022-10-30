@@ -329,11 +329,13 @@
                         
                             @if($carte->category->name == $category->name)
 
+                            @php $i = 1; @endphp
+
                               <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                 <div class="flex justify-between items-center">
                                   <div class="flex items-center">
                                     <p class="text-gray-500">
-                                      {{$loop->iteration}}
+                                      @php echo $i; $i++; @endphp
                                     </p>
                                     <div class="mx-4 text-gray-500">
                                       <p class="text-left font-bold">
