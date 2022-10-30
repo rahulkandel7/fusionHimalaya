@@ -325,7 +325,7 @@
                           {{-- {{$carte->category->name}}
                           {{$category->name}} --}}
                         
-                            @if($carte->category_id == $category->id)
+                            {{-- @if($carte->category_id === $category->id) --}}
                               <p>hello</p>
 
                               <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
@@ -348,7 +348,7 @@
                                   </p>
                                 </div>
                               </div>
-                            @endif
+                            {{-- @endif --}}
                           @endforeach
 
                         </div>
