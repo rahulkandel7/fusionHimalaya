@@ -48,7 +48,7 @@
                         <td class="p-2">{{$loop->iteration}}</td>
 
                         <td class="p-2">
-                            <img src="{{asset('public/'.$gallery->photopath)}}" alt="" class="w-32">
+                            <img src="{{asset('public/public/'.$gallery->photopath)}}" alt="" class="w-32">
                         </td>
                         <td class="p-2">
                            

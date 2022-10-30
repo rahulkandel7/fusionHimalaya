@@ -48,7 +48,7 @@
                         <td class="p-2">{{$slideshow->priority}}</td>
 
                         <td class="p-2">
-                            <img src="{{asset('public/'.$slideshow->photopath)}}" alt="" class="w-32">
+                            <img src="{{asset('public/public/'.$slideshow->photopath)}}" alt="" class="w-32">
                         </td>
                         <td class="p-2">
                             <a href="{{route('admin.slideshows.edit',$slideshow->id)}}" class="py-1 text-indigo-700 hover:text-indigo-900 mx-0.5 px-2 rounded-md text-xl shadow-md hover:shadow-lg " title="Edit"><i class="ri-edit-box-line"></i></a>

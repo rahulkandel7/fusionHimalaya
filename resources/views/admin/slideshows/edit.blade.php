@@ -15,7 +15,7 @@
 
             <div class="my-2">
                 <label class="py-5 text-gray-700 dark:text-gray-400 my-5">Previous Image</label>
-                <img src="{{asset('public/'.$slideshow->photopath)}}" alt="" class="w-32 h-32 rounded-md shadow-md">
+                <img src="{{asset('public/public/'.$slideshow->photopath)}}" alt="" class="w-32 h-32 rounded-md shadow-md">
             </div>
            
             <div class="mt-10">

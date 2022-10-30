@@ -16,8 +16,8 @@
     <div class="w-11/12 mx-auto grid grid-cols-2 md:grid-cols-4" id="gallery">
       @foreach ($galleries as $gallery)
         <div class="border border-red-200 p-2 rounded-lg shadow-lg m-3 overflow-hidden group">
-          <a href="{{asset('public/'.$gallery->photopath)}}">
-            <img src="{{asset('public/'.$gallery->photopath)}}" alt="" class="rounnded-lg group-hover:scale-110 transition duration-150 ease-in-out overflow-hidden  shadow-md">
+          <a href="{{asset('public/public/'.$gallery->photopath)}}">
+            <img src="{{asset('public/public/'.$gallery->photopath)}}" alt="" class="rounnded-lg group-hover:scale-110 transition duration-150 ease-in-out overflow-hidden  shadow-md">
           </a>
         </div>
       @endforeach
