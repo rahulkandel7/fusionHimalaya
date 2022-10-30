@@ -192,7 +192,7 @@
                             <div class="flex items-center my-2 text-sm">
                                 <i class="ri-mail-line text-xl text-gray-200"></i>
                                 <p class="text-gray-200 mx-2">
-                                    fusionhimalayan@gmail.com
+                                    <a href="mailto:fusionhimalayan@gmail.com" class="mx-1">fusionhimalayan@gmail.com</a>
                                 </p>
                             </div>
 

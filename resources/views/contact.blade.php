@@ -24,7 +24,7 @@
                     </h3>
                         {{-- Links start --}}
                         <div class="flex justify-center">
-                            <a href="http://facebook.com/CAAIMS" class="px-2">
+                            <a href="" class="px-2">
                                 <div class="hover:bg-red-700 h-8 w-8 hover:text-white transition-all rounded-full shadow-xl flex items-center justify-center">
                                     <i  class="ri-facebook-line text-xl"></i>
                                 </div>
@@ -46,13 +46,13 @@
                                 Get in touch with Fusion Himalayan
                             </p>
                             <p class="py-2 text-gray-800 justify-center  capitalize flex items-center">
-                                <i  class="ri-smartphone-line pr-1"></i> 056-594473, 9855053779
+                                <i class="ri-phone-line"></i> <a href="tel:+358442790186" class="mx-1">+358442790186</a>
                             </p>
                             <p class="py-2 text-gray-800 justify-center  flex items-center">
-                                <i  class="ri-mail-line pr-1"></i>info@aimschitwan.com
+                                <i class="ri-mail-line"></i> <a href="mailto:fusionhimalayan@gmail.com" class="mx-1">fusionhimalayan@gmail.com</a>
                             </p>
                             <p class="py-2 text-gray-800 justify-center  capitalize flex items-center">
-                                <i  class="ri-map-line pr-1"></i>Hakim Chowk, Narayangarh
+                                <i  class="ri-map-line pr-1"></i>Yrjonkatu 7, Pori, Finland
                             </p>
                         {{-- get in touch end --}}
 
