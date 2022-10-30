@@ -324,12 +324,13 @@
                         >
                           {{-- @php $cartee = App\Models\Carte::where('category_id',$category->id)->get(); @endphp --}}
                           {{-- {{$cartee}} --}}
+                          @php $i = 1; @endphp
                           @foreach ($cartes as $carte)
                       
                         
                             @if($carte->category->name == $category->name)
 
-                            @php $i = 1; @endphp
+                            
 
                               <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                 <div class="flex justify-between items-center">
