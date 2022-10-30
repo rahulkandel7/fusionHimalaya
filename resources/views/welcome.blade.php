@@ -44,19 +44,17 @@
 
   <div class="my-5 ">
     <h1 class="text-indigo-500 text-5xl md:text-7xl text-center font-bold mt-10" style="font-family: 'Beau Rivage', handwriting;">
-      Welcome to the Fusion Himalayan
+      Welcome to the Fusion Himalaya
     </h1>
     <div class="w-11/12 mx-auto grid md:grid-cols-2 my-8 gap-10">
         <div>
           <p class="text-justify text-gray-600 text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quisquam officiis culpa beatae ipsam, voluptates necessitatibus ex enim facere incidunt hic tenetur minima maiores. Expedita voluptate incidunt modi voluptatum veritatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero odit eaque repellendus? Ex, cum neque vel, consectetur dolore laboriosam, laborum sunt hic quam in fugiat. Consequuntur consectetur nihil ullam doloribus.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus repellat incidunt rem mollitia, adipisci aliquid totam? Fugiat provident voluptas porro dolores, numquam delectus, inventore ea officiis nisi, quidem laudantium totam!
+            Nepalilainen Ravintola Fusion Himalayan, Authentic Nepalese restaurant in the Yrjonkatu 7 Pori. 
+            Fusion Himalayan offers menus for Lunch and Dinner. The restaurant has a Latin atmosphere with Latin American ornaments and music. Within a year of its opening, Fusion Himalayan has been recognized for its quality of food and excellent service.
           </p>
-
-          <p class="text-justify text-gray-600 text-sm mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quisquam officiis culpa beatae ipsam, voluptates necessitatibus ex enim facere incidunt hic tenetur minima maiores. Expedita voluptate incidunt modi voluptatum veritatis.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero odit eaque repellendus? Ex, cum neque vel, consectetur dolore laboriosam, laborum sunt hic quam in fugiat. Consequuntur consectetur nihil ullam doloribus.
+          <p class="text-justify text-gray-600 text-sm">
+            We are a close-knit, fun-loving, passionate group spreading the word about good times and wonderful cuisine. In our restaurant cooking space, we offer limited capacity onsite. We cook, tell tales, give interesting culinary demonstrations and lectures, but most importantly, we handle every customer as if you were a guest at our dinner table. Come with us!
+            Come dine with us & experience an authentic food in an intimate dining space. We look forward to serving you!
           </p>
 
           <div class="flex justify-end my-2">

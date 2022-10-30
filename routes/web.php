@@ -1,11 +1,6 @@
 <?php
 
-use App\Models\Carte;
-use App\Models\Category;
-use App\Models\Gallery;
-use App\Models\Lunch;
-use App\Models\Popular;
-use App\Models\Slideshow;
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,32 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $galleries = Gallery::take(6)->latest()->get();
-    $slideshows = Slideshow::all()->sortBy('priority');
-    $lunches = Lunch::all();
-    $populars = Popular::all();
-    $cartes = Carte::all();
-    $categories = Category::all();
-    return view('welcome', compact('galleries', 'slideshows', 'lunches', 'populars', 'cartes', 'categories'));
-})->name('home');
+Route::get('/', [FrontendController::class, 'home'])->name('home');
 
-Route::get('/gallery', function () {
-    $galleries = Gallery::all();
-    return view('gallery', compact('galleries'));
-})->name('gallery');
+Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 
-Route::get('/contact-us', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact');
 
-Route::get('/reservation', function () {
-    return view('reservation');
-})->name('reservation');
+Route::get('/reservation', [FrontendController::class, 'reservation'])->name('reservation');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [FrontendController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+
+Route::post('/make-reservation', [FrontendController::class, 'makeReservation'])->name('make-reservation');
 
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('slideshows', \App\Http\Controllers\Admin\SlideshowController::class);
@@ -64,6 +44,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     Route::resource('cartes', \App\Http\Controllers\Admin\CateController::class);
     Route::post('/cartes/delete', [\App\Http\Controllers\Admin\CateController::class, 'delete'])->name('cartes.delete');
+
+    Route::get('/reservations', [\App\Http\Controllers\FrontendController::class, 'fetchReservations'])->name('reservations.index');
+    Route::get('/reservations/confirm/{id}', [\App\Http\Controllers\FrontendController::class, 'confirm'])->name('reservations.confirm');
+    Route::get('/reservations/cancel/{id}', [\App\Http\Controllers\FrontendController::class, 'cancel'])->name('reservations.cancel');
 });
 
 require __DIR__ . '/auth.php';
