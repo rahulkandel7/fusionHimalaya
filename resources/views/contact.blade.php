@@ -15,7 +15,7 @@
 
             <div class=" grid md:grid-cols-2 gap-10 mt-5">
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.567624573666!2d84.43333781494958!3d27.668846033789986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994fb42d12c9f37%3A0x4f8aaf785aff1aab!2sAIMS%20CA!5e0!3m2!1sen!2snp!4v1660127491889!5m2!1sen!2snp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div>
