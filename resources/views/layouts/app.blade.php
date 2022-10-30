@@ -30,15 +30,15 @@
                 <div class="w-11/12 mx-auto py-1 flex justify-between">
                     <div class="flex">
                        <div class="flex items-center text-gray-800 text-sm">
-                        <i class="ri-mail-line"></i> <a href="mailto:info@gmail.com" class="mx-1">info@gmail.com</a>
+                        <i class="ri-mail-line"></i> <a href="mailto:fusionhimalayan@gmail.com" class="mx-1">fusionhimalayan@gmail.com</a>
                        </div>
 
                        <div class="flex items-center text-gray-800 text-sm mx-2">
-                        <i class="ri-phone-line"></i> <a href="tel:+" class="mx-1">123456789</a>
+                        <i class="ri-phone-line"></i> <a href="tel:+358442790186" class="mx-1">+358442790186</a>
                        </div>
                     </div>
                     <div class="felx">
-                        <a href="" class="hover:text-blue-500 mx-1">
+                        <a href="https://www.facebook.com/profile.php?id=100086321990357" class="hover:text-blue-500 mx-1">
                             <i class="ri-facebook-circle-line"></i>
                         </a>
 
@@ -161,7 +161,7 @@
                             Follow us on:
                         </p>
                         <div class="flex mt-1 text-gray-200 text-2xl ">
-                            <a href="" class="hover:text-blue-500 mx-1">
+                            <a href="https://www.facebook.com/profile.php?id=100086321990357" class="hover:text-blue-500 mx-1">
                                 <i class="ri-facebook-circle-line"></i>
                             </a>
 
@@ -178,21 +178,21 @@
                             <div class="flex items-center my-2 text-sm">
                                 <i class="ri-map-pin-line text-xl text-gray-200"></i>
                                 <p class="text-gray-200 mx-2">
-                                    Location
+                                    Yrjonkatu 7, Pori, Finland
                                 </p>
                             </div>
 
                             <div class="flex items-center my-2 text-sm">
                                 <i class="ri-smartphone-line text-xl text-gray-200"></i>
                                 <p class="text-gray-200 mx-2">
-                                    Phone Number
+                                    +358442790186
                                 </p>
                             </div>
 
                             <div class="flex items-center my-2 text-sm">
                                 <i class="ri-mail-line text-xl text-gray-200"></i>
                                 <p class="text-gray-200 mx-2">
-                                    Phone Number
+                                    fusionhimalayan@gmail.com
                                 </p>
                             </div>
 
@@ -205,18 +205,32 @@
                         <h1 class="text-white text-2xl font-bold ">Opening Hours</h1>
 
                         <div class="mt-5">
-                            
+
                             <div class="flex items-center my-2 text-sm">
                                 <i class="ri-time-line text-xl text-gray-200"></i>
                                 <p class="text-gray-200 mx-2">
-                                    Monday-Thursday: 11pm - 2pm 
+                                    Ma: Suljettu/Closed
                                 </p>
                             </div>
 
                             <div class="flex items-center my-2 text-sm">
                                 <i class="ri-time-line text-xl text-gray-200"></i>
                                 <p class="text-gray-200 mx-2">
-                                    Sunday: 11pm - 2pm 
+                                    Ma-To: 11:00-21:00
+                                </p>
+                            </div>
+
+                            <div class="flex items-center my-2 text-sm">
+                                <i class="ri-time-line text-xl text-gray-200"></i>
+                                <p class="text-gray-200 mx-2">
+                                    Pe-La: 12:00-22:00
+                                </p>
+                            </div>
+
+                            <div class="flex items-center my-2 text-sm">
+                                <i class="ri-time-line text-xl text-gray-200"></i>
+                                <p class="text-gray-200 mx-2">
+                                    Su: 12:00-20:00
                                 </p>
                             </div>
                         </div>
