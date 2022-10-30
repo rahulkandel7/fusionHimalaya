@@ -85,7 +85,7 @@
               Book a table now !
             </h1>
             <div class="flex justify-center my-8">
-              <button class="px-4 py-2 rounded-full shadow-md border border-red-500 text-white hover:bg-red-500">Book Now</button>
+              <a href="{{route('reservation')}}" class="px-4 py-2 rounded-full shadow-md border border-red-500 text-white hover:bg-red-500">Book Now</a>
 
             </div>
           </div>
