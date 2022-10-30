@@ -313,19 +313,21 @@
                 
                         <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== {{$loop->iteration}} ? selected = {{$loop->iteration}} : selected = null">
                           <div class="flex items-center justify-between">
-                            <span class="uppercase" x-bind:class="{'font-bold text-indigo-500 ': selected=={{$loop->iteration}}}">{{$category->name}}</span>
-                            <span><i class="ri-add-line" x-bind:class="{'ri-subtract-line ': selected=={{$loop->iteration}}}" ></i></span>
+                            <span class="uppercase" x-bind:class="{'font-bold text-indigo-500 ': selected == {{$loop->iteration}}}">{{$category->name}}</span>
+                            <span><i class="ri-add-line" x-bind:class="{'ri-subtract-line ': selected == {{$loop->iteration}}}" ></i></span>
                           </div>
                         </button>
+                        {{-- x-bind:style="selected == {{$loop->iteration}} ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" --}}
                 
-                        <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == {{$loop->iteration}} ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                        <div class="relative overflow-hidden transition-all max-h-0  duration-700" style="" x-ref="container1" 
+                        :class="selected == {{$loop->iteration}} ? 'max-h-fit' : ''"
+                        >
                           {{-- @php $cartee = App\Models\Carte::where('category_id',$category->id)->get(); @endphp --}}
                           {{-- {{$cartee}} --}}
                           @foreach ($cartes as $carte)
-                          {{-- {{$carte->category->name}}
-                          {{$category->name}} --}}
+                      
                         
-                            @if($carte->category_id === $category->id)
+                            @if($carte->category->name == $category->name)
 
                               <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                 <div class="flex justify-between items-center">
@@ -347,7 +349,10 @@
                                   </p>
                                 </div>
                               </div>
+
+                            
                             @endif
+
                           @endforeach
 
                         </div>
