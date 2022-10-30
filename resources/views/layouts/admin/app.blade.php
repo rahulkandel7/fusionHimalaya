@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Fusion Himalaya</title>
 
 
     {{-- Font --}}
     <link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=rubik:400" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=rubik:400" rel="stylesheet" />
 
 
 
@@ -82,7 +82,7 @@
                 </li> 
 
                 <li class="text-lg py-1.5">
-                    <a href="{{route('admin.reservations.index')}}" class="flex items-center @if(Route::is('admin.cartes.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
+                    <a href="{{route('admin.reservations.index')}}" class="flex items-center @if(Route::is('admin.reservations.*')) bg-black text-white @else hover:bg-gray-100 @endif p-2 rounded-lg">
                         <i class="ri-restaurant-line text-xl"></i> &nbsp; </i> Reservations
                     </a>
                 </li> 

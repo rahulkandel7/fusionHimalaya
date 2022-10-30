@@ -27,8 +27,51 @@
     @include('layouts.message')
 
     <div class="py-4 flex-1 px-6">
-        <div class="border-b-2 border-red-100 dark:border-gray-500 flex justify-between">
-            <h1 class="font-bold pt-4 pb-1 px-2 text-3xl">All Reservations</h1>
+        <div class="border-b-2 border-red-100 dark:border-gray-500 flex justify-between items-center">
+            @if (Request::is('admin/reservations'))
+                <h1 class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                    All Reservations
+                </h1>
+                
+            @endif
+            @if (Request::is('admin/reservations/pending'))
+                <h1 class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                   Pending Reservations
+                </h1>
+            
+            @endif
+
+            @if (Request::is('admin/reservations/confirmed'))
+                <h1 class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                   Confirmed Reservations
+                </h1>
+            
+            @endif
+
+            @if (Request::is('admin/reservations/canceled'))
+                <h1 class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                   Cancelled Reservations
+                </h1>
+            
+            @endif
+
+
+
+            <div class="my-2">
+                <a href="{{route('admin.reservations.fetchpending')}}" class="px-6 mx-2  py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md shadow-md">
+                    Pending
+                </a>
+
+
+                <a href="{{route('admin.reservations.fetchconfirm')}}" class="px-6 mx-2  py-2 bg-green-500 hover:bg-green-600 text-white rounded-md shadow-md">
+                    Confirmed
+                </a>
+
+
+                <a href="{{route('admin.reservations.fetchcancel')}}" class="px-6 mx-2  py-2 bg-red-500 hover:bg-red-600 text-white rounded-md shadow-md">
+                    Concelled
+                </a>
+            </div>
 
         </div>
 
@@ -65,9 +108,9 @@
                                     Confirm
                                 </a>
 
-                                <button class="px-4 py-1 bg-red-500 hover:bg-red-700 text-white rounded-md shadow-md">
+                                <a href="{{route('admin.reservations.cancel',$reservation->id)}}" class="px-4 py-1 bg-red-500 hover:bg-red-700 text-white rounded-md shadow-md">
                                     Cancel
-                                </button>
+                                </a>
                                 
                             </td>
                         </tr>

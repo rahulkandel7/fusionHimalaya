@@ -48,6 +48,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/reservations', [\App\Http\Controllers\FrontendController::class, 'fetchReservations'])->name('reservations.index');
     Route::get('/reservations/confirm/{id}', [\App\Http\Controllers\FrontendController::class, 'confirm'])->name('reservations.confirm');
     Route::get('/reservations/cancel/{id}', [\App\Http\Controllers\FrontendController::class, 'cancel'])->name('reservations.cancel');
+    Route::get('/reservations/pending', [\App\Http\Controllers\FrontendController::class, 'fetchPending'])->name('reservations.fetchpending');
+    Route::get('/reservations/confirmed', [\App\Http\Controllers\FrontendController::class, 'fetchConfirm'])->name('reservations.fetchconfirm');
+    Route::get('/reservations/canceled', [\App\Http\Controllers\FrontendController::class, 'fetchCancel'])->name('reservations.fetchcancel');
 });
 
 require __DIR__ . '/auth.php';

@@ -79,8 +79,26 @@ class FrontendController extends Controller
     public function cancel($id)
     {
         $reservation = Reservation::find($id);
-        $reservation->status = 'confirmed';
+        $reservation->status = 'cancelled';
         $reservation->save();
         return redirect()->back()->with('success', 'Reservation Cancelled successfully');
+    }
+
+    public function fetchPending()
+    {
+        $reservations = Reservation::where('status', 'pending')->get();
+        return view('admin.reservations.index', compact('reservations'));
+    }
+
+    public function fetchConfirm()
+    {
+        $reservations = Reservation::where('status', 'confirmed')->get();
+        return view('admin.reservations.index', compact('reservations'));
+    }
+
+    public function fetchCancel()
+    {
+        $reservations = Reservation::where('status', 'cancelled')->get();
+        return view('admin.reservations.index', compact('reservations'));
     }
 }
