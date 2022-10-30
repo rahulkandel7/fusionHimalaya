@@ -335,7 +335,8 @@
                                 <div class="flex justify-between items-center">
                                   <div class="flex items-center">
                                     <p class="text-gray-500">
-                                      @php echo $i; $i++; @endphp
+                                      @php echo $i; @endphp
+                                      @php $i = $i+1; @endphp
                                     </p>
                                     <div class="mx-4 text-gray-500">
                                       <p class="text-left font-bold">
