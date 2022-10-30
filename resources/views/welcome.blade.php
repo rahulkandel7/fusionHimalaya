@@ -324,6 +324,8 @@
                           @foreach ($cartes as $carte)
                           {{-- {{$carte->category->name}}
                           {{$category->name}} --}}
+                          {{$carte->category_id}}
+                          {{$category->id}}
                             @if($carte->category_id === $category->id)
 
 
