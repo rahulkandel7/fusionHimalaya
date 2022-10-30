@@ -325,8 +325,7 @@
                           {{-- {{$carte->category->name}}
                           {{$category->name}} --}}
                         
-                            {{-- @if($carte->category_id === $category->id) --}}
-                              <p>hello</p>
+                            @if($carte->category_id === $category->id)
 
                               <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                 <div class="flex justify-between items-center">
@@ -348,7 +347,7 @@
                                   </p>
                                 </div>
                               </div>
-                            {{-- @endif --}}
+                            @endif
                           @endforeach
 
                         </div>
