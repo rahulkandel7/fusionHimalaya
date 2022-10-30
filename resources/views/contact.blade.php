@@ -15,7 +15,7 @@
 
             <div class=" grid md:grid-cols-2 gap-10 mt-5">
                 <div>
-                    <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1904.5116868544249!2d21.796423551592092!3d61.48799014304829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46890b0000a32351%3A0x1fcaa76044c6743f!2sNepalilainen%20Ravintola%20fusion%20Himalayan!5e0!3m2!1sen!2snp!4v1667115565250!5m2!1sen!2snp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div>
