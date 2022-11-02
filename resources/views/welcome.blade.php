@@ -384,7 +384,7 @@
           <div>
             <div class="flex items-center justify-between ">
                 <div class="flex items-center">
-                  <img src="{{asset('public/'.$popular->photopath)}}" alt="" class="w-24 rounded-full h-24 object-cover">
+                  <img src="{{asset('public/public/'.$popular->photopath)}}" alt="" class="w-24 rounded-full h-24 object-cover">
                   <p class="text-gray-600 mx-4">
                    {{$popular->title}}
                   </p>

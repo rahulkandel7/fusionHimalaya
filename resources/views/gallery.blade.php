@@ -11,7 +11,7 @@
 
 <div class="my-5">
     <h1 class="text-indigo-500 text-5xl md:text-7xl text-center font-bold my-10" style="font-family: 'Beau Rivage', handwriting;">
-      Food Gallery
+      Gallery
     </h1>
     <div class="w-11/12 mx-auto grid grid-cols-2 md:grid-cols-4" id="gallery">
       @foreach ($galleries as $gallery)
