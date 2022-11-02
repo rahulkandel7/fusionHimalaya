@@ -134,13 +134,15 @@
                         x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 5 }">Friday </button>
                 </div>
                 <div x-show="current === 1" class="p-3 text-center mt-2 text-xs md:text-base">
+                  @php $i=1; @endphp
                   @foreach ($lunches as $lunch)
                       @if ($lunch->day == 'Monday')
                       <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                         <div class="flex justify-between items-center">
                           <div class="flex items-center">
                             <p class="text-gray-500">
-                              {{$loop->iteration}}
+                              @php echo $i; @endphp
+                              @php $i++; @endphp
                             </p>
                             <div class="mx-4 text-gray-500">
                               <p class="text-left font-bold">
@@ -164,13 +166,15 @@
                  
                 </div>
                 <div x-show="current === 2" class="p-3 text-center mt-6">
+                      @php $i=1; @endphp
                       @foreach ($lunches as $lunch)
                       @if ($lunch->day == 'Tuesday')
                       <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                         <div class="flex justify-between items-center">
                           <div class="flex items-center">
                             <p class="text-gray-500">
-                              {{$loop->iteration}}
+                              @php echo $i; @endphp
+                              @php $i++; @endphp
                             </p>
                             <div class="mx-4 text-gray-500">
                               <p class="text-left font-bold">
@@ -193,8 +197,11 @@
                   @endforeach
                 </div>
                 <div x-show="current === 3" class="p-3 text-center mt-6">
+                    @php $i=1; @endphp
                     @foreach ($lunches as $lunch)
                       @if ($lunch->day == 'Wednesday')
+                      @php echo $i; @endphp
+                      @php $i++; @endphp
                       <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                         <div class="flex justify-between items-center">
                           <div class="flex items-center">
@@ -223,8 +230,11 @@
                 </div>
 
                 <div x-show="current === 4" class="p-3 text-center mt-6">
+                  @php $i=1; @endphp
                   @foreach ($lunches as $lunch)
                     @if ($lunch->day == 'Thursday')
+                    @php echo $i; @endphp
+                    @php $i++; @endphp
                     <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                       <div class="flex justify-between items-center">
                         <div class="flex items-center">
@@ -253,8 +263,11 @@
                </div>
 
                 <div x-show="current === 5" class="p-3 text-center mt-6">
+                  @php $i=1; @endphp
                     @foreach ($lunches as $lunch)
                       @if ($lunch->day == 'Friday')
+                      @php echo $i; @endphp 
+                      @php $i++; @endphp
                       <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                         <div class="flex justify-between items-center">
                           <div class="flex items-center">
