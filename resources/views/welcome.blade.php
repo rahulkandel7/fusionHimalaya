@@ -101,10 +101,10 @@
             </div>
             <div class="grid grid-cols-2 gap-10">
                 <div class="border border-red-200 p-2 rounded-lg shadow-lg h-fit">
-                    <img src="{{ asset('images/slide1.webp') }}" alt="" class="rounnded-lg  shadow-md">
+                    <img src="{{ asset('images/book.jpeg') }}" alt="" class="rounnded-lg  shadow-md">
                 </div>
                 <div class="border border-red-200 p-2 rounded-lg shadow-lg h-fit">
-                    <img src="{{ asset('images/slide1.webp') }}" alt="" class="rounnded-lg  shadow-md">
+                    <img src="{{ asset('images/1.jpg') }}" alt="" class="rounnded-lg  shadow-md">
                 </div>
 
 
