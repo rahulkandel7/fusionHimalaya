@@ -418,7 +418,7 @@
                             <hr class="border-red-200">
 
                             <div class=" border-b border-gray-200" x-data="{ selected: 1 }">
-                                <p class="font-bold text-gray-600 text-sm px-4 pt-2">
+                                <p class="font-bold text-gray-600 text-sm px-4 pt-2 text-center">
                                     (
                                     Kaikkin päärouka-annoksin kuulu basmatiriisiä, tandoori naan leipä ja raita kastike /
                                     All main courses include basmati rice, tandoor naan bread and raita sauce.
@@ -469,7 +469,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <p class="text-gray-600 w-56">
+                                                                <p class="text-gray-600 w-56 text-end">
                                                                     {{ $carte->price }} &euro;
                                                                 </p>
                                                             </div>
