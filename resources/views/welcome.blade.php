@@ -182,10 +182,10 @@
                                 </div>
                                 <div x-show="current === 1" class="p-3 text-center mt-2 text-xs md:text-base">
                                     <p class="font-bold text-gray-800 text-sm">
-                                        Lounaaseen sisältyy päivän salaatti, basmati riisi, naan leipä, mango lassi, sekä
+                                        (Lounaaseen sisältyy päivän salaatti, basmati riisi, naan leipä, mango lassi, sekä
                                         kahvi
                                         tai nepalilainen tee. Basmati rice, naan bread, mango lassi, salad, nepalese tea and
-                                        coffee are included.
+                                        coffee are included.)
                                     </p>
                                     @php $i=1; @endphp
                                     @foreach ($lunches as $lunch)
@@ -223,6 +223,12 @@
                                 </div>
                                 <div x-show="current === 2" class="p-3 text-center mt-6">
                                     @php $i=1; @endphp
+                                    <p class="font-bold text-gray-800 text-sm">
+                                        (Lounaaseen sisältyy päivän salaatti, basmati riisi, naan leipä, mango lassi, sekä
+                                        kahvi
+                                        tai nepalilainen tee. Basmati rice, naan bread, mango lassi, salad, nepalese tea and
+                                        coffee are included.)
+                                    </p>
                                     @foreach ($lunches as $lunch)
                                         @if ($lunch->day == 'Tuesday')
                                             <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
@@ -258,15 +264,20 @@
                                 </div>
                                 <div x-show="current === 3" class="p-3 text-center mt-6">
                                     @php $i=1; @endphp
+                                    <p class="font-bold text-gray-800 text-sm">
+                                        (Lounaaseen sisältyy päivän salaatti, basmati riisi, naan leipä, mango lassi, sekä
+                                        kahvi
+                                        tai nepalilainen tee. Basmati rice, naan bread, mango lassi, salad, nepalese tea and
+                                        coffee are included.)
+                                    </p>
                                     @foreach ($lunches as $lunch)
                                         @if ($lunch->day == 'Wednesday')
-                                            @php echo $i; @endphp
                                             @php $i++; @endphp
                                             <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                                 <div class="flex justify-between items-center">
                                                     <div class="flex items-center">
                                                         <p class="text-gray-500">
-                                                            {{ $loop->iteration }}
+                                                            @php echo $i; @endphp
                                                         </p>
                                                         <div class="mx-4 text-gray-500">
                                                             <p class="text-left font-bold">
@@ -295,15 +306,20 @@
 
                                 <div x-show="current === 4" class="p-3 text-center mt-6">
                                     @php $i=1; @endphp
+                                    <p class="font-bold text-gray-800 text-sm">
+                                        (Lounaaseen sisältyy päivän salaatti, basmati riisi, naan leipä, mango lassi, sekä
+                                        kahvi
+                                        tai nepalilainen tee. Basmati rice, naan bread, mango lassi, salad, nepalese tea and
+                                        coffee are included.)
+                                    </p>
                                     @foreach ($lunches as $lunch)
                                         @if ($lunch->day == 'Thursday')
-                                            @php echo $i; @endphp
                                             @php $i++; @endphp
                                             <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                                 <div class="flex justify-between items-center">
                                                     <div class="flex items-center">
                                                         <p class="text-gray-500">
-                                                            {{ $loop->iteration }}
+                                                            @php echo $i; @endphp
                                                         </p>
                                                         <div class="mx-4 text-gray-500">
                                                             <p class="text-left font-bold">
@@ -332,15 +348,20 @@
 
                                 <div x-show="current === 5" class="p-3 text-center mt-6">
                                     @php $i=1; @endphp
+                                    <p class="font-bold text-gray-800 text-sm">
+                                        (Lounaaseen sisältyy päivän salaatti, basmati riisi, naan leipä, mango lassi, sekä
+                                        kahvi
+                                        tai nepalilainen tee. Basmati rice, naan bread, mango lassi, salad, nepalese tea and
+                                        coffee are included.)
+                                    </p>
                                     @foreach ($lunches as $lunch)
                                         @if ($lunch->day == 'Friday')
-                                            @php echo $i; @endphp
                                             @php $i++; @endphp
                                             <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                                 <div class="flex justify-between items-center">
                                                     <div class="flex items-center">
                                                         <p class="text-gray-500">
-                                                            {{ $loop->iteration }}
+                                                            @php echo $i; @endphp
                                                         </p>
                                                         <div class="mx-4 text-gray-500">
                                                             <p class="text-left font-bold">
