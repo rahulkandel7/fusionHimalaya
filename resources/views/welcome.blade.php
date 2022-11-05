@@ -57,7 +57,7 @@
                 <p class="text-justify text-gray-600 text-sm">
                     Nepalilainen Ravintola Fusion Himalayan, Authentic Nepalese restaurant in the Yrjonkatu 7 Pori.
                     Fusion Himalayan offers menus for Lunch and Dinner. The restaurant has a Latin atmosphere with Latin
-                    American ornaments and music. Within a year of its opening, Fusion Himalayan has been recognized for its
+                    Nepali ornaments and music. Within a year of its opening, Fusion Himalayan has been recognized for its
                     quality of food and excellent service.
                 </p>
                 <p class="text-justify text-gray-600 text-sm mt-3">
@@ -70,18 +70,21 @@
                 </p>
 
                 <div class="flex justify-end my-2">
-                    <button class="bg-red-500 hover:bg-red-600 rounded-md shadow-lg text-white px-4 py-1">
+                    <a href="{{ route('about') }}"
+                        class="bg-red-500 hover:bg-red-600 rounded-md shadow-lg text-white px-4 py-1">
                         Read More
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <div x-show="language === 2">
                 <p class="text-justify text-gray-600 text-sm">
-                    Nepalilainen Ravintola Fusion Himalayan, Aito nepalilainen ravintola Yrjonkatu 7 Pori. Fusion Himalayan
-                    tarjoaa menut lounaalle ja illalliselle. Ravintolassa on latinalainen tunnelma latinalaisamerikkalaisten
-                    koristeiden ja musiikin kera. Vuoden sisällä avaamisestaan ​​Fusion Himalayan on saanut tunnustusta
-                    ruoasta ja erinomaisesta palvelustaan.
+                    Nepalilainen Ravintola Fusion Himalayan, Aito nepalilainen ravintola Yrjonkatu 7 Porissa.
+                    Fusion Himalayan tarjoaa menut lounaalle ja illalliselle. Ravintolassa on latinalainen ilmapiiri
+                    latinalaisen kanssa
+                    Nepalilaisia ​​koristeita ja musiikkia. Vuoden sisällä avaamisestaan ​​Fusion Himalayan on saanut
+                    tunnustusta siitä
+                    ruoan laatu ja erinomainen palvelu.
                 </p>
                 <p class="text-justify text-gray-600 text-sm mt-3">
                     Olemme tiivis, hauskanpitoa rakastava, intohimoinen ryhmä, joka levittää sanaa hyvistä ajoista ja
@@ -178,6 +181,12 @@
                                     </button>
                                 </div>
                                 <div x-show="current === 1" class="p-3 text-center mt-2 text-xs md:text-base">
+                                    <p class="font-bold text-gray-800 text-sm">
+                                        Lounaaseen sisältyy päivän salaatti, basmati riisi, naan leipä, mango lassi, sekä
+                                        kahvi
+                                        tai nepalilainen tee. Basmati rice, naan bread, mango lassi, salad, nepalese tea and
+                                        coffee are included.
+                                    </p>
                                     @php $i=1; @endphp
                                     @foreach ($lunches as $lunch)
                                         @if ($lunch->day == 'Monday')
