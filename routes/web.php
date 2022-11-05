@@ -46,6 +46,9 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('cartes', \App\Http\Controllers\Admin\CateController::class);
     Route::post('/cartes/delete', [\App\Http\Controllers\Admin\CateController::class, 'delete'])->name('cartes.delete');
 
+    Route::resource('drinks', \App\Http\Controllers\Admin\DrinkController::class);
+    Route::post('/drinks/delete', [\App\Http\Controllers\Admin\DrinkController::class, 'delete'])->name('drinks.delete');
+
     Route::get('/reservations', [\App\Http\Controllers\FrontendController::class, 'fetchReservations'])->name('reservations.index');
     Route::get('/reservations/confirm/{id}', [\App\Http\Controllers\FrontendController::class, 'confirm'])->name('reservations.confirm');
     Route::get('/reservations/cancel/{id}', [\App\Http\Controllers\FrontendController::class, 'cancel'])->name('reservations.cancel');

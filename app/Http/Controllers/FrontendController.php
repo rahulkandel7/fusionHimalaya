@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Carte;
 use App\Models\Category;
+use App\Models\Drink;
 use App\Models\Gallery;
 use App\Models\Lunch;
 use App\Models\Popular;
@@ -21,7 +22,8 @@ class FrontendController extends Controller
         $populars = Popular::all();
         $cartes = Carte::all();
         $categories = Category::all();
-        return view('welcome', compact('galleries', 'slideshows', 'lunches', 'populars', 'cartes', 'categories'));
+        $drinks = Drink::all();
+        return view('welcome', compact('galleries', 'slideshows', 'lunches', 'populars', 'cartes', 'categories', 'drinks'));
     }
 
     public function gallery()

@@ -492,6 +492,104 @@
                 </div>
             </div>
             {{-- a-la-carte Model close --}}
+
+            {{-- Drink Model --}}
+            <div x-data="{ isDrink: false }" x-cloak>
+                <button @click="isDrink=true"
+                    class="uppercase text-red-500 mx-2 hover:text-white transition ease-in-out duration-300 text-xl rounded-lg shadow-lg hover:bg-red-600 px-4 py-1 border border-red-500">Drinks</button>
+                <div class="fixed top-0 bottom-0 right-0 left-0 bg-black bg-opacity-60 backdrop-blur-sm z-50"
+                    x-show="isDrink">
+                    <div class="flex justify-center items-center h-full">
+                        <div class="w-9/12 bg-gray-100 h-4/6 rounded-md shadow-lg overflow-scroll"
+                            @click.away="isDrink=false">
+                            <div class="flex justify-between items-center m-3">
+                                <h1 class="text-2xl font-bold">
+                                    Drinks
+                                </h1>
+                                <button class="bg-red-500 hover:bg-red-600 text-white rounded-md shadow-md px-5 py-1"
+                                    @click="isDrink=false">
+                                    Close
+                                </button>
+                            </div>
+                            <hr class="border-red-200">
+
+                            {{-- Menu Tabbed view Open --}}
+                            <div x-data="{ current: 1 }">
+                                <div class="flex overflow-scroll text-xs md:text-base border-b-2">
+                                    <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 1"
+                                        x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 1 }">Soft
+                                        Drinks</button>
+                                    <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 2"
+                                        x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 2 }">Hard
+                                        Drinks</button>
+
+                                </div>
+                                <div x-show="current === 1" class="p-3 text-center mt-2 text-xs md:text-base">
+                                    @php $i=1; @endphp
+                                    @foreach ($drinks as $drink)
+                                        @if ($drink->type == 'soft')
+                                            <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                                                <div class="flex justify-between items-center">
+                                                    <div class="flex items-center">
+                                                        <p class="text-gray-500">
+                                                            @php echo $i; @endphp
+                                                            @php $i++; @endphp
+                                                        </p>
+                                                        <div class="mx-4 text-gray-500">
+                                                            <p class="text-left font-bold">
+                                                                {{ $drink->name }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <p class="text-gray-600 w-56 text-end">
+                                                        {{ $drink->price }} &euro;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+
+                                </div>
+                                <div x-show="current === 2" class="p-3 text-center mt-6">
+                                    @php $i=1; @endphp
+
+                                    @foreach ($drinks as $drink)
+                                        @if ($drink->type == 'hard')
+                                            <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                                                <div class="flex justify-between items-center">
+                                                    <div class="flex items-center">
+                                                        <p class="text-gray-500">
+                                                            @php echo $i; @endphp
+                                                            @php $i++; @endphp
+                                                        </p>
+                                                        <div class="mx-4 text-gray-500">
+                                                            <p class="text-left font-bold">
+                                                                {{ $drink->name }} <span class="text-xs ">
+                                                                    ({{ $drink->level }} %)
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <p class="text-gray-600 w-56 text-end">
+                                                        {{ $drink->liter }} ml
+                                                    </p>
+                                                    <p class="text-gray-600 w-56 text-end">
+                                                        {{ $drink->price }} &euro;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+
+                            </div>
+                            {{-- Menu Tabbed view Close --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- Lunch Model close --}}
         </div>
 
         <hr class="border-red-100 mb-5">
