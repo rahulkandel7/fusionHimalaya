@@ -236,12 +236,6 @@
 
                     <div class="mt-5">
 
-                        <div class="flex items-center my-2 text-sm">
-                            <i class="ri-time-line text-xl text-gray-200"></i>
-                            <p class="text-gray-200 mx-2">
-                                Ma: Suljettu/Closed
-                            </p>
-                        </div>
 
                         <div class="flex items-center my-2 text-sm">
                             <i class="ri-time-line text-xl text-gray-200"></i>
