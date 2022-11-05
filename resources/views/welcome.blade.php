@@ -522,10 +522,10 @@
                                     <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 2"
                                         x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 2 }">Wine</button>
 
-                                    <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 2"
+                                    <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 3"
                                         x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 3 }">Whiskies</button>
 
-                                    <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 2"
+                                    <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 4"
                                         x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 4 }">Oluet/siideri/lonkero</button>
 
                                 </div>
@@ -546,6 +546,9 @@
                                                             </p>
                                                         </div>
                                                     </div>
+                                                    <p class="text-gray-600 w-56 text-end">
+                                                        {{ $drink->liter }} &euro;
+                                                    </p>
                                                     <p class="text-gray-600 w-56 text-end">
                                                         {{ $drink->price }} &euro;
                                                     </p>

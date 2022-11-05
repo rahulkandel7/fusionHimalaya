@@ -53,7 +53,7 @@
 
                             <td class="p-2">{{ $loop->iteration }}</td>
                             <td class="p-2">{{ $drink->name }}</td>
-                            <td class="p-2">{{ $drink->level }} $</td>
+                            <td class="p-2">{{ $drink->level }} %</td>
                             <td class="p-2">{{ $drink->liter }}</td>
                             <td class="p-2">{{ $drink->price }} &euro;</td>
                             <td class="p-2">{{ $drink->type }} </td>

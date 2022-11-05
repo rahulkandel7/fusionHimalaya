@@ -107,8 +107,9 @@ class DrinkController extends Controller
         //
     }
 
-    public function delete(Drink $drink)
+    public function delete($id)
     {
+        $drink = Drink::find($id);
         $drink->delete();
 
         return redirect()->route('admin.drinks.index')
