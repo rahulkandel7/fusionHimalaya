@@ -580,7 +580,7 @@
                                                     </div>
 
                                                     <p class="text-gray-600 w-56 text-end">
-                                                        {{ $drink->liter }} ml
+                                                        {{ $drink->liter }}
                                                     </p>
                                                     <p class="text-gray-600 w-56 text-end">
                                                         {{ $drink->price }} &euro;
@@ -613,7 +613,7 @@
                                                     </div>
 
                                                     <p class="text-gray-600 w-56 text-end">
-                                                        {{ $drink->liter }} ml
+                                                        {{ $drink->liter }}
                                                     </p>
                                                     <p class="text-gray-600 w-56 text-end">
                                                         {{ $drink->price }} &euro;
@@ -646,7 +646,7 @@
                                                     </div>
 
                                                     <p class="text-gray-600 w-56 text-end">
-                                                        {{ $drink->liter }} ml
+                                                        {{ $drink->liter }}
                                                     </p>
                                                     <p class="text-gray-600 w-56 text-end">
                                                         {{ $drink->price }} &euro;
