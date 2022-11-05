@@ -296,7 +296,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p class="text-gray-600 w-56">
+                                                    <p class="text-gray-600 w-56 text-end">
                                                         {{ $lunch->price }} &euro;
                                                     </p>
                                                 </div>
