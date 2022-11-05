@@ -74,7 +74,9 @@
                     class="w-full border-none shadow-lg rounded-md placeholder:text-gray-400 focus:ring-indigo-500">
                     <option selected disabled>-- Select Drink Type --</option>
                     <option value="soft">Soft Drink</option>
-                    <option value="hard">Hard Drink</option>
+                    <option value="wine">Wine</option>
+                    <option value="whiskies">Whiskies</option>
+                    <option value="oluet/siideri/lonkero">Oluet/siideri/lonkero</option>
                 </select>
             </div>
 

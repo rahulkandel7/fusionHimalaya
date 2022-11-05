@@ -73,7 +73,10 @@
                     class="w-full border-none shadow-lg rounded-md placeholder:text-gray-400 focus:ring-indigo-500">
                     <option selected disabled>-- Select Drink Type --</option>
                     <option value="soft" @if ($drink->type == 'soft') selected @endif>Soft Drink</option>
-                    <option value="hard" @if ($drink->type == 'hard') selected @endif>Hard Drink</option>
+                    <option value="wine" @if ($drink->type == 'wine') selected @endif>Wine</option>
+                    <option value="whiskies" @if ($drink->type == 'whiskies') selected @endif>Whiskies</option>
+                    <option value="oluet/siideri/lonkero" @if ($drink->type == 'oluet/siideri/lonkero') selected @endif>
+                        Oluet/siideri/lonkero</option>
                 </select>
             </div>
 

@@ -520,8 +520,13 @@
                                         x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 1 }">Soft
                                         Drinks</button>
                                     <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 2"
-                                        x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 2 }">Hard
-                                        Drinks</button>
+                                        x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 2 }">Wine</button>
+
+                                    <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 2"
+                                        x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 3 }">Whiskies</button>
+
+                                    <button class="px-4 py-2 w-full uppercase my-2" x-on:click="current = 2"
+                                        x-bind:class="{ ' bg-indigo-500 text-white  rounded-md shadow-md': current === 4 }">Oluet/siideri/lonkero</button>
 
                                 </div>
                                 <div x-show="current === 1" class="p-3 text-center mt-2 text-xs md:text-base">
@@ -554,7 +559,73 @@
                                     @php $i=1; @endphp
 
                                     @foreach ($drinks as $drink)
-                                        @if ($drink->type == 'hard')
+                                        @if ($drink->type == 'wine')
+                                            <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                                                <div class="flex justify-between items-center">
+                                                    <div class="flex items-center">
+                                                        <p class="text-gray-500">
+                                                            @php echo $i; @endphp
+                                                            @php $i++; @endphp
+                                                        </p>
+                                                        <div class="mx-4 text-gray-500">
+                                                            <p class="text-left font-bold">
+                                                                {{ $drink->name }} <span class="text-xs ">
+                                                                    ({{ $drink->level }} %)
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <p class="text-gray-600 w-56 text-end">
+                                                        {{ $drink->liter }} ml
+                                                    </p>
+                                                    <p class="text-gray-600 w-56 text-end">
+                                                        {{ $drink->price }} &euro;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+
+                                <div x-show="current === 3" class="p-3 text-center mt-6">
+                                    @php $i=1; @endphp
+
+                                    @foreach ($drinks as $drink)
+                                        @if ($drink->type == 'whiskies')
+                                            <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
+                                                <div class="flex justify-between items-center">
+                                                    <div class="flex items-center">
+                                                        <p class="text-gray-500">
+                                                            @php echo $i; @endphp
+                                                            @php $i++; @endphp
+                                                        </p>
+                                                        <div class="mx-4 text-gray-500">
+                                                            <p class="text-left font-bold">
+                                                                {{ $drink->name }} <span class="text-xs ">
+                                                                    ({{ $drink->level }} %)
+                                                                </span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <p class="text-gray-600 w-56 text-end">
+                                                        {{ $drink->liter }} ml
+                                                    </p>
+                                                    <p class="text-gray-600 w-56 text-end">
+                                                        {{ $drink->price }} &euro;
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+
+                                <div x-show="current === 4" class="p-3 text-center mt-6">
+                                    @php $i=1; @endphp
+
+                                    @foreach ($drinks as $drink)
+                                        @if ($drink->type == 'oluet/siideri/lonkero')
                                             <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                                 <div class="flex justify-between items-center">
                                                     <div class="flex items-center">
