@@ -299,6 +299,7 @@
                                                     <p class="text-gray-600 w-56 text-end">
                                                         {{ $lunch->price }} &euro;
                                                     </p>
+
                                                 </div>
                                             </div>
                                         @endif
