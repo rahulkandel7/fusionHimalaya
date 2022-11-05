@@ -73,7 +73,7 @@
         <div class="hidden md:block w-full sticky top-0 bg-gray-50 shadow-sm z-10">
             <div class="flex w-11/12 mx-auto justify-between items-center py-2">
                 <div>
-                    <img src="{{ asset('images/logo.jpg') }}" alt="Fusion Himalayan Logo" class="w-24">
+                    <img src="{{ asset('images/logo.png') }}" alt="Fusion Himalayan Logo" class="w-24">
                 </div>
                 <div>
                     <ul class="flex">
@@ -126,7 +126,7 @@
         <div x-data="{ isNav: false }" class="md:hidden">
             <div class="w-full flex bg-white justify-between items-center py-2 px-5">
                 <div>
-                    <img src="{{ asset('images/logo.jpg') }}" alt="Logo" class="w-20">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-20">
                 </div>
                 <button @click="isNav=true">
                     <i class="ri-menu-3-line text-2xl"></i>
@@ -182,7 +182,7 @@
         <div class="w-full bg-gray-600 ">
             <div class="w-11/12 mx-auto py-10 grid md:grid-cols-3">
                 <div>
-                    <img src="{{ asset('images/logo.jpg') }}" alt="Logo"
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo"
                         class="w-40 bg-white rounded-full object-contain">
                     <h1 class="text-white text-2xl font-bold mt-5">Fusion Himalayan</h1>
                     <p class="text-white mt-5">

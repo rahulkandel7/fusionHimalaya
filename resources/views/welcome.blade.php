@@ -114,7 +114,7 @@
 
     <div class="my-5">
         <div class="relative w-full h-64"
-            style="background-image: url('/images/slide2.jpeg');background-attachment: fixed; background-size: cover">
+            style="background-image: url('/images/book.jpeg');background-attachment: fixed; background-size: cover">
             <div class="absolute top-0 bottom-0 right-0 left-0 bg-black bg-opacity-50">
                 <div class="flex justify-center items-center h-full">
                     <div>
