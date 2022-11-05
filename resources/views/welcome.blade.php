@@ -418,7 +418,7 @@
                             </div>
                             <hr class="border-red-200">
 
-                            <div class=" border-b border-gray-200" x-data="{ selected: 1 }">
+                            <div class=" border-b border-gray-200" x-data="{ selected: 0 }">
                                 <p class="font-bold text-gray-600 text-sm px-4 pt-2 text-center">
                                     (
                                     Kaikkin päärouka-annoksin kuulu basmatiriisiä, tandoori naan leipä ja raita kastike /
