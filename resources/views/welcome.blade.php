@@ -547,7 +547,7 @@
                                                         </div>
                                                     </div>
                                                     <p class="text-gray-600 w-56 text-end">
-                                                        {{ $drink->liter }} &euro;
+                                                        {{ $drink->liter }}
                                                     </p>
                                                     <p class="text-gray-600 w-56 text-end">
                                                         {{ $drink->price }} &euro;
