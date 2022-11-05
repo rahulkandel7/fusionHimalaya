@@ -40,6 +40,11 @@ class FrontendController extends Controller
         return view('reservation');
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+
     public function dashboard()
     {
         return view('dashboard');

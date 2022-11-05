@@ -26,7 +26,7 @@
 </head>
 
 <body class="font-sans antialiased " style="font-family: 'Poppins', sans-serif;">
-    <div class="min-h-screen bg-gray-50" x-data="{ language: 1 }">
+    <div class="min-h-screen bg-gray-50" x-data="{ language: 2 }">
         {{-- Top part --}}
         <div class="hidden md:block w-full bg-gray-50">
             <div class="w-11/12 mx-auto py-1 flex justify-between">
@@ -104,7 +104,8 @@
                             </li>
                         </a>
 
-                        <a href="" class="hover:text-red-500 mx-5">
+                        <a href="{{ route('about') }}"
+                            class="hover:text-red-500 mx-5 @if (Route::currentRouteName() == 'about') text-red-500 @endif">
                             <li>
                                 About Us
                             </li>

@@ -21,6 +21,7 @@ Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 Route::get('/contact-us', [FrontendController::class, 'contact'])->name('contact');
 
 Route::get('/reservation', [FrontendController::class, 'reservation'])->name('reservation');
+Route::get('/about-us', [FrontendController::class, 'about'])->name('about');
 
 Route::get('/dashboard', [FrontendController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
