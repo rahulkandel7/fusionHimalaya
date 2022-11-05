@@ -272,12 +272,13 @@
                                     </p>
                                     @foreach ($lunches as $lunch)
                                         @if ($lunch->day == 'Wednesday')
-                                            @php $i++; @endphp
                                             <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                                 <div class="flex justify-between items-center">
                                                     <div class="flex items-center">
                                                         <p class="text-gray-500">
                                                             @php echo $i; @endphp
+                                                            @php $i++; @endphp
+
                                                         </p>
                                                         <div class="mx-4 text-gray-500">
                                                             <p class="text-left font-bold">
@@ -314,12 +315,13 @@
                                     </p>
                                     @foreach ($lunches as $lunch)
                                         @if ($lunch->day == 'Thursday')
-                                            @php $i++; @endphp
                                             <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                                 <div class="flex justify-between items-center">
                                                     <div class="flex items-center">
                                                         <p class="text-gray-500">
                                                             @php echo $i; @endphp
+                                                            @php $i++; @endphp
+
                                                         </p>
                                                         <div class="mx-4 text-gray-500">
                                                             <p class="text-left font-bold">
@@ -356,12 +358,12 @@
                                     </p>
                                     @foreach ($lunches as $lunch)
                                         @if ($lunch->day == 'Friday')
-                                            @php $i++; @endphp
                                             <div class=" border border-gray-200 p-5 rounded-md shadow-inner mt-4">
                                                 <div class="flex justify-between items-center">
                                                     <div class="flex items-center">
                                                         <p class="text-gray-500">
                                                             @php echo $i; @endphp
+                                                            @php $i++; @endphp
                                                         </p>
                                                         <div class="mx-4 text-gray-500">
                                                             <p class="text-left font-bold">
